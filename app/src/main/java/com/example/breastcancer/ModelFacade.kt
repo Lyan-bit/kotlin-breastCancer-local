@@ -34,12 +34,6 @@ class ModelFacade private constructor(context: Context) {
         }
     }
     
-	/* This metatype code requires OclType.java, OclAttribute.java, OclOperation.java */
-	fun initialiseOclTypes() {
-				    val breastCancerOclType: OclType = OclType.createByPKOclType("BreastCancer")
-		breastCancerOclType.setMetatype(BreastCancer::class.java)
-    }
-    
     fun createBreastCancer(x: BreastCancerVO) { 
           db.createBreastCancer(x)
           currentBreastCancer = x
