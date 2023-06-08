@@ -2,7 +2,7 @@ package com.example.breastcancer
 
 import java.util.HashMap
 
-class BreastCancer {
+class BreastCancer { 
 
     init {
         BreastCancerAllInstances.add(this)
