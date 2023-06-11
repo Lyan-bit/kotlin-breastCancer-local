@@ -147,18 +147,18 @@ class ModelFacade private constructor(context: Context) {
 		var res = ArrayList<BreastCancer>()
 			for (x in currentBreastCancers.indices) {
 					val vo: BreastCancerVO = currentBreastCancers[x]
-				    val itemx = BreastCancer.createByPKBreastCancer(vo.getId())
-	            itemx.id = vo.getId()
-            itemx.age = vo.getAge()
-            itemx.bmi = vo.getBmi()
-            itemx.glucose = vo.getGlucose()
-            itemx.insulin = vo.getInsulin()
-            itemx.homa = vo.getHoma()
-            itemx.leptin = vo.getLeptin()
-            itemx.adiponectin = vo.getAdiponectin()
-            itemx.resistin = vo.getResistin()
-            itemx.mcp = vo.getMcp()
-            itemx.outcome = vo.getOutcome()
+				    val itemx = BreastCancer.createByPKBreastCancer(vo.id)
+	            itemx.id = vo.id
+            itemx.age = vo.age
+            itemx.bmi = vo.bmi
+            itemx.glucose = vo.glucose
+            itemx.insulin = vo.insulin
+            itemx.homa = vo.homa
+            itemx.leptin = vo.leptin
+            itemx.adiponectin = vo.adiponectin
+            itemx.resistin = vo.resistin
+            itemx.mcp = vo.mcp
+            itemx.outcome = vo.outcome
 			res.add(itemx)
 		}
 		return res
@@ -180,17 +180,17 @@ class ModelFacade private constructor(context: Context) {
 	        } else {
 	            val vo: BreastCancerVO = res[0]
 	            val itemx = BreastCancer.createByPKBreastCancer(value)
-            itemx.id = vo.getId()
-            itemx.age = vo.getAge()
-            itemx.bmi = vo.getBmi()
-            itemx.glucose = vo.getGlucose()
-            itemx.insulin = vo.getInsulin()
-            itemx.homa = vo.getHoma()
-            itemx.leptin = vo.getLeptin()
-            itemx.adiponectin = vo.getAdiponectin()
-            itemx.resistin = vo.getResistin()
-            itemx.mcp = vo.getMcp()
-            itemx.outcome = vo.getOutcome()
+            itemx.id = vo.id
+            itemx.age = vo.age
+            itemx.bmi = vo.bmi
+            itemx.glucose = vo.glucose
+            itemx.insulin = vo.insulin
+            itemx.homa = vo.homa
+            itemx.leptin = vo.leptin
+            itemx.adiponectin = vo.adiponectin
+            itemx.resistin = vo.resistin
+            itemx.mcp = vo.mcp
+            itemx.outcome = vo.outcome
 	            itemx
 	        }
     }
@@ -203,7 +203,7 @@ class ModelFacade private constructor(context: Context) {
         currentBreastCancers = db.listBreastCancer()
         val res: ArrayList<String> = ArrayList()
             for (breastcancer in currentBreastCancers.indices) {
-                res.add(currentBreastCancers[breastcancer].getId())
+                res.add(currentBreastCancers[breastcancer].id)
             }
         return res
     }
